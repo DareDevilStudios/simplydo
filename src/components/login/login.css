@@ -1,0 +1,39 @@
+.main{
+    height: 100vh;
+}
+.login-head{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 3px;
+}
+
+.button{
+    background: #597EF7;
+    color: #fff;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.btn-img{
+    width: 2rem;
+}
+
+.img1{
+    width: 6rem;
+    height: 13rem;
+    top: -.5rem;
+}
+
+.img2{
+    z-index: 1;
+    width: 17rem;
+    top:35%;
+    right:10rem;
+}
+.img3{
+    bottom: -4rem;
+    right: -7rem;
+}
