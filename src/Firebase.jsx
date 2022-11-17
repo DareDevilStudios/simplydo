@@ -1,6 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import {getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { BrowserRouter as Router ,Routes, Navigate  } from 'react-router-dom'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,13 +22,21 @@ const provider = new GoogleAuthProvider()
 export const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
     .then((result) => {
-        const name = result.user.displayName
-        const email = result.user.email
-        const profilepic = result.user.photoURL
 
-        localStorage.setItem("name" , name)
-        localStorage.setItem("email" , email)
-        localStorage.setItem("profilepic" , profilepic)
+        console.log(result);
+        // const name = result.user.displayName
+        // const email = result.user.email
+        // const profilepic = result.user.photoURL
+
+        // localStorage.setItem("name" , name)
+        // localStorage.setItem("email" , email)
+        // localStorage.setItem("profilepic" , profilepic)
+
+        if(result.user.emailVerified === true)
+        {
+            window.location.href = "/home";
+        }
+
     })
     .catch((err) => {
         console.log(err);

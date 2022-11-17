@@ -1,4 +1,4 @@
-import { signInWithGoogle } from './Firebase'
+import { signInWithGoogle } from '../../Firebase'
 import GoogleButton from 'react-google-button'
 import logo from "./images/Vector.png"
 const Left = () => {
